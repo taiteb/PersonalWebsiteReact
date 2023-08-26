@@ -18,3 +18,25 @@ header h1 {
     font-weight: 800;
     color: white
 }
+
+header nav{
+    background: #335c81;
+    display: flex;
+    border: 2em;
+    padding: .5em;
+    border-radius: 3px;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.links a{
+    text-decoration-line: none;
+    font-size: 1.5em;
+    font-family: 'Quicksand', sans-serif;
+    color: whitesmoke;
+    border: 2px;
+    border-width: 2px;
+    border-radius: 20px;
+    opacity: .8;
+    transition: all 0.2s ease-in-out;
+}

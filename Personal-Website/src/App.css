@@ -15,6 +15,19 @@ header {
     background: #dbdaea;
 }
 
+nav{
+    position: sticky;
+    top: 0;
+    background: #335c81;
+    display: flex;
+    border: 2em;
+    padding: .5em;
+    border-radius: 5px;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
 header iframe {
     position: relative;
     z-index: 0;
@@ -34,18 +47,8 @@ header h1 {
     z-index: 1;
     padding-left: .8em;
     font-size: 2.8em;
-    font-weight: 1200;
+    font-weight: 1000;
     color: white
-}
-
-header nav{
-    background: #335c81;
-    display: flex;
-    border: 2em;
-    padding: .5em;
-    border-radius: 5px;
-    flex-direction: row;
-    justify-content: space-around;
 }
 
 .links a{
@@ -63,15 +66,15 @@ header nav{
     padding-top: 1em;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: stretch;
     align-items: center;
 }
 
-.TextFill p {
+.TextFill p, .TextFill iframe {
     text-align: center;
     background: #dbfcff;
     padding: 8px;
-    margin-bottom: .5em;
+    margin-bottom: 2em;
     border: 3px outset #dbdaea;
     border-left-width: 8px;
     border-bottom-width: 8px;
@@ -80,10 +83,8 @@ header nav{
     transition: all 0.38s ease-in-out;
     display: flex;
     flex-direction: column;
-    /* align-self: flex-start; */
-    /* margin-left: 15vw; */
     font-size: 1.3em;
-    
+    margin-top: 1em;
 }
 
 .TextFill h2 {

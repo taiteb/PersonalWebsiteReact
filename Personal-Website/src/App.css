@@ -1,3 +1,20 @@
+* {
+    font-family: 'Quicksand', sans-serif;
+}
+
+html{
+    /* background: #dbdaea; */
+
+    background-color: #0066A2;
+}
+
+header {
+    border-radius: 5px;
+    border-top-right-radius: 50px;
+    padding: 5px;
+    background: #dbdaea;
+}
+
 header iframe {
     position: relative;
     z-index: 0;
@@ -6,16 +23,18 @@ header iframe {
     overflow: hidden;
     border: none;
     padding-right: 10;
-    border-bottom-right-radius: 25px
+    border-radius: 5px;
+    border-top-right-radius: 50px
+    
 }
 
 header h1 {
-    font-family: 'Quicksand', sans-serif;
+    /* font-family: 'Quicksand', sans-serif; */
     position: absolute;
     z-index: 1;
     padding-left: .8em;
     font-size: 2.8em;
-    font-weight: 800;
+    font-weight: 1200;
     color: white
 }
 
@@ -24,7 +43,7 @@ header nav{
     display: flex;
     border: 2em;
     padding: .5em;
-    border-radius: 3px;
+    border-radius: 5px;
     flex-direction: row;
     justify-content: space-around;
 }
@@ -32,11 +51,81 @@ header nav{
 .links a{
     text-decoration-line: none;
     font-size: 1.5em;
-    font-family: 'Quicksand', sans-serif;
     color: whitesmoke;
     border: 2px;
     border-width: 2px;
     border-radius: 20px;
     opacity: .8;
     transition: all 0.2s ease-in-out;
+}
+
+.TextFill {
+    padding-top: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.TextFill p {
+    text-align: center;
+    background: #dbfcff;
+    padding: 8px;
+    margin-bottom: .5em;
+    border: 3px outset #dbdaea;
+    border-left-width: 8px;
+    border-bottom-width: 8px;
+    border-radius: 10px;
+    width: 70vw;
+    transition: all 0.38s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    /* align-self: flex-start; */
+    /* margin-left: 15vw; */
+    font-size: 1.3em;
+    
+}
+
+.TextFill h2 {
+    text-transform: capitalize;
+    font-size: 2em;
+    font-weight: 900;
+    border: 4px outset #0066A2;
+    border-radius: 10px;
+    padding: 8px;
+    padding-bottom: 5px;
+    margin: 5px;
+    vertical-align: center;
+    text-align: center;
+    color: #dbfcff ;
+    background: #335c81;
+    width: fit-content;
+    transition: all 0.2s ease-in-out;
+}
+
+.TextFill h3 {
+    text-transform: capitalize;
+    border: 4px solid;
+    border-radius: 20px;
+    padding: 8px;
+    padding-bottom: 5px;
+    margin: 5px;
+    vertical-align: center;
+    text-align: center;
+    color: #dbfcff ;
+    background: #335c81;
+	border-style: outset;
+	border-color: #0066A2;
+    width: fit-content;
+    transition: all 0.2s ease-in-out;
+}
+
+.TextFill :hover {
+    border-style: solid;
+    border-color: #023f63;
+}
+
+nav a:hover {
+    opacity: 1;
+    transform: scale(1.03);
 }

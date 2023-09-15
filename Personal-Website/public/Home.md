@@ -1,4 +1,4 @@
-## Welcome to my website! 
+### Welcome to my website! 
 
 I'm a 25 year old full-stack web developer, having enrolled and (soon to be) graduated from FullStack academy, in partnership with Colorado State University. I appreciate your interest in my work, and I hope this serves as a showcase for my abilities. This site is built by me, from the ground up. 
 

@@ -10,9 +10,17 @@ export default function Home() {
             .then((text) => setContent(text));
     }, []);
 
-    return (<div className="TextFill">
-        <ReactMarkdown children={content} />
-        <h2 className="textfill">My most recent sketch:</h2>
-        <iframe src="https://taiteb.github.io/8-24-23/" frameborder="0" className="textfill"></iframe>
+    return (<div className="Page">
+        <div className="ContentBox TextFill">
+            <ReactMarkdown children={content} />
+        </div>
+        <div className="ContentBox ImageGallery">
+            <h2 className="textfill">Generative Art Highlights:</h2>
+            <img src="/2010.png" alt="" />
+            <img src="/4100.png" alt="" />
+            <img src="/6183.png" alt="" />
+            <img src="/18815.png" alt="" />
+        </div>
+
     </div>)
 }

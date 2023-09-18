@@ -9,30 +9,35 @@
 }
 
 html {
-    background-color: #dbdaea;
+    background-color: #C2D6D5;
 }
 
 header {
     border-radius: 5px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
     border-bottom-right-radius: 50px;
+    border: 2px solid #3C2A3C;
+    border-left-width: 5px;
+    border-bottom-width: 5px;
     padding: 5px;
-    background-color: #dbfcff;
+    background-color: #7EC8B8;
     height: 15vh;
     display: flex;
     justify-content: center;
     align-content: center;
     margin-bottom: 2em;
+    margin-top: 0;
 }
 
 nav {
     z-index: 2;
     position: sticky;
     top: 0;
-    background: #335c81;
+    background: #3C2A3C;
     display: flex;
     border: 2em;
     padding: .5em;
-    border-radius: 5px;
     flex-direction: row;
     justify-content: space-around;
 }
@@ -54,17 +59,17 @@ header h1 {
     font-size: 5em;
     font-family: 'Lilita One', cursive;
     font-style: bold;
-    color: white
+    color: #FAF9F9
 }
 
 .links a {
     text-decoration-line: none;
     font-size: 1.5em;
-    color: whitesmoke;
+    color: #FAF9F9;
     border: 2px;
     border-width: 2px;
     border-radius: 20px;
-    opacity: .8;
+    opacity: .85;
     transition: all 0.2s ease-in-out;
 }
 
@@ -83,10 +88,10 @@ nav a:hover {
 
 .ContentBox{
     grid-area: ContentBox;
-    background-color: #027fc8;
-    color: #dbfcff;
+    background-color: #A0CFC7;
+    color: #335C81;
     padding: 1em;
-    border: 3px outset #dbfcff;
+    border: 2px solid #3C2A3C;
     border-left-width: 5px;
     border-bottom-width: 5px;
     border-radius: 10px;
@@ -115,24 +120,28 @@ aside {
 h2 {
     font-size: 1.5em;
     font-weight: 900;
-    border: 4px outset #0177bb;
+    border: 2px outset #54B6A0;
+    border-left-width: 4px;
+    border-bottom-width: 4px;
     border-radius: 10px;
     padding: 8px 5px;
     margin: 5px;
     text-align: center;
-    color: #dbfcff;
-    background: #335c81;
+    color: #FAF9F9;
+    background: #7EC8B8;
     width: fit-content;
 }
 
 h3 {
     border-radius: 10px;
-    border: 4px outset #0177bb;
+    border: 2px outset #54B6A0;
+    border-left-width: 4px;
+    border-bottom-width: 4px;
     padding: 8px 5px;
     margin: 5px;
     text-align: center;
-    color: #dbfcff;
-    background: #335c81;
+    color: #FAF9F9;
+    background: #7EC8B8;
     width: fit-content;
 }
 

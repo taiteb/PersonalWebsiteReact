@@ -9,16 +9,15 @@
 }
 
 html {
-    background: #dbfcff;
-    
+    background-color: #dbdaea;
 }
 
 header {
     border-radius: 5px;
     border-bottom-right-radius: 50px;
     padding: 5px;
-    background: #dbdaea;
-    height: 30vh;
+    background-color: #dbfcff;
+    height: 15vh;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -26,7 +25,6 @@ header {
 }
 
 nav {
-
     z-index: 2;
     position: sticky;
     top: 0;
@@ -79,22 +77,18 @@ nav a:hover {
     padding-top: 1em;
     gap: 4em;
     display: grid;
-    
     grid-template-columns: .5fr 5fr 2fr .5fr;
     grid-template-areas: ". ContentBox sidebar .";
-    /* justify-content: stretch; */
-    /* align-items: center; */
 }
 
 .ContentBox{
     grid-area: ContentBox;
-    /* background: #dbfcff; */
-    background-color: #0066A2;
+    background-color: #027fc8;
     color: #dbfcff;
     padding: 1em;
-    border: 3px outset #dbdaea;
-    border-left-width: 14px;
-    border-bottom-width: 14px;
+    border: 3px outset #dbfcff;
+    border-left-width: 8px;
+    border-bottom-width: 8px;
     border-radius: 10px;
     font-size: 1.3em;
     width: fit-content;
@@ -115,37 +109,30 @@ aside {
 .ImageGallery img{
     max-width: 100%;
     padding: 12px;
-    
 }
 
 
 h2 {
-    text-transform: capitalize;
     font-size: 1.5em;
     font-weight: 900;
     border: 4px outset #0177bb;
     border-radius: 10px;
-    padding: 8px;
-    padding-bottom: 5px;
+    padding: 8px 5px;
     margin: 5px;
     text-align: center;
     color: #dbfcff;
     background: #335c81;
     width: fit-content;
-    transition: all 0.2s ease-in-out;
 }
 
 h3 {
-    text-transform: capitalize;
     border-radius: 10px;
     border: 4px outset #0177bb;
-    padding: 8px;
-    padding-bottom: 5px;
+    padding: 8px 5px;
     margin: 5px;
     text-align: center;
     color: #dbfcff;
     background: #335c81;
     width: fit-content;
-    transition: all 0.2s ease-in-out;
 }
 

@@ -12,7 +12,10 @@ export default function Home() {
 
     return (<div className="Home">
         <aside>
-            <ReactMarkdown children={content} />
+            <div className="ContentBox">
+               <ReactMarkdown children={content} /> 
+            </div>
+            
         </aside>
 
         <div className="ContentBox">

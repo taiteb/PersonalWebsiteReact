@@ -87,8 +87,8 @@ nav a:hover {
     color: #dbfcff;
     padding: 1em;
     border: 3px outset #dbfcff;
-    border-left-width: 8px;
-    border-bottom-width: 8px;
+    border-left-width: 5px;
+    border-bottom-width: 5px;
     border-radius: 10px;
     font-size: 1.3em;
     width: fit-content;

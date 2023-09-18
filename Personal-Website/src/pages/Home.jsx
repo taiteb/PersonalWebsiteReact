@@ -10,17 +10,19 @@ export default function Home() {
             .then((text) => setContent(text));
     }, []);
 
-    return (<div className="Page">
-        <div className="ContentBox TextFill">
+    return (<div className="Home">
+        <aside>
             <ReactMarkdown children={content} />
-        </div>
-        <div className="ContentBox ImageGallery">
-            <h2 className="textfill">Generative Art Highlights:</h2>
-            <img src="/2010.png" alt="" />
-            <img src="/4100.png" alt="" />
-            <img src="/6183.png" alt="" />
-            <img src="/18815.png" alt="" />
-        </div>
+        </aside>
 
+        <div className="ContentBox">
+            <h2 className="textfill">Generative Art Highlights:</h2>
+            <div className="ImageGallery">
+                <img src="/2010.png" alt="" />
+                <img src="/4100.png" alt="" />
+                <img src="/6183.png" alt="" />
+                <img src="/18815.png" alt="" />
+            </div>
+        </div>
     </div>)
 }

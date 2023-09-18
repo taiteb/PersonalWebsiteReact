@@ -1,5 +1,3 @@
-## About 
-
 ### About the site
 This site is built off React JS, deployed through Netlify. Most of the text portions are .md documents imported into React with `react-markdown`, to save time and pain with styling, save for the Recent section; in order to stay away from using `dangerouslySetInnerHTML` to be able to use iFrame units, it's worth the trade off to just keep the text simple. Aside from that, and some styling, things are fairly basic here. 
 

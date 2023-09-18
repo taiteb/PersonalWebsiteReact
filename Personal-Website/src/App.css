@@ -9,19 +9,25 @@
 }
 
 html {
-    /* background: #dbdaea; */
-
-    background-color: #0066A2;
+    background: #dbfcff;
+    
 }
 
 header {
     border-radius: 5px;
-    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
     padding: 5px;
     background: #dbdaea;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 2em;
 }
 
 nav {
+
+    z-index: 2;
     position: sticky;
     top: 0;
     background: #335c81;
@@ -31,28 +37,23 @@ nav {
     border-radius: 5px;
     flex-direction: row;
     justify-content: space-around;
-
 }
 
 header iframe {
     position: relative;
     z-index: 0;
     width: 100%;
-    height: 125px;
-    overflow: hidden;
+    height: 100%;
     border: none;
     padding-right: 10;
     border-radius: 5px;
-    border-top-right-radius: 50px
+    border-bottom-right-radius: 50px
 }
 
 header h1 {
     position: absolute;
     z-index: 1;
-    padding-left: .8em;
-    /* align-self: center; */
-    top: 0;
-    font-size: 4em;
+    font-size: 5em;
     font-family: 'Lilita One', cursive;
     font-style: bold;
     color: white
@@ -74,18 +75,22 @@ nav a:hover {
     transform: scale(1.03);
 }
 
-.Page {
+.Home {
     padding-top: 1em;
-    display: grid;
     gap: 4em;
-    grid-template-columns: repeat(3, 1fr);
-    flex-direction: column;
+    display: grid;
+    
+    grid-template-columns: .5fr 5fr 2fr .5fr;
+    grid-template-areas: ". ContentBox sidebar .";
     /* justify-content: stretch; */
     /* align-items: center; */
 }
 
 .ContentBox{
-    background: #dbfcff;
+    grid-area: ContentBox;
+    /* background: #dbfcff; */
+    background-color: #0066A2;
+    color: #dbfcff;
     padding: 1em;
     border: 3px outset #dbdaea;
     border-left-width: 14px;
@@ -93,7 +98,10 @@ nav a:hover {
     border-radius: 10px;
     font-size: 1.3em;
     width: fit-content;
-    display: table;
+}
+
+aside {
+    grid-area: sidebar;
 }
 
 .TextFill {
@@ -101,7 +109,7 @@ nav a:hover {
 }
 
 .ImageGallery{
-    display: table-cell;
+    display: inline-block;
 }
 
 .ImageGallery img{
@@ -129,7 +137,7 @@ h2 {
 
 h3 {
     text-transform: capitalize;
-    border-radius: 20px;
+    border-radius: 10px;
     border: 4px outset #0177bb;
     padding: 8px;
     padding-bottom: 5px;

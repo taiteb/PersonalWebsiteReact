@@ -11,18 +11,19 @@ function App() {
 
   return (
     <>
-      <header role='banner'>
-        <h1>Taite McGrady</h1>
-        <iframe src="https://taiteb.github.io/gradientSweep" scrolling='no' ></iframe>
-        
-      </header>
-      <nav className='links'>
+    <nav className='links'>
           <Link to='/'>Home</Link>
           <Link to='/about'>About</Link>
           <Link to='/portfolio'>Portfolio</Link>
           <Link to='/contact'>Contact</Link>
           <Link to='/recent'>Recent Projects</Link>
         </nav>
+      <header role='banner'>
+        <h1>Taite McGrady</h1>
+        <iframe src="https://taiteb.github.io/gradientSweep" scrolling='no' ></iframe>
+        
+      </header>
+      
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />

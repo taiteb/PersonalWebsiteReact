@@ -11,7 +11,7 @@ export default function About() {
     }, []);
 
     return (<div className="Page">
-        <div className="ContentBox">
+        <div className="ContentBox About">
             <ReactMarkdown children={content} />
         </div>
     </div>)

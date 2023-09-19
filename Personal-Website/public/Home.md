@@ -1,8 +1,8 @@
 ### Welcome to my website! 
 
-I'm a 25 year old full-stack web developer, having enrolled and (soon to be) graduated from FullStack academy, in partnership with Colorado State University. I appreciate your interest in my work, and I hope this serves as a showcase for my abilities. This site is built by me, from the ground up. 
+I'm a full-stack web developer, having graduated from FullStack Academy in partnership with Colorado State University. I appreciate your interest in my work, and I hope this serves as a showcase for my abilities. No templates or pre-designed components have been used
 
-For a more detailed bio, click the About tab above. Portfolio is where I've got my most substantial projects, and I'll be updating it as I continue to work. To get in touch, please fill out the Contact form above. Finally, Recent Projects contains smaller projects, mostly P5.js sketches I've been doing. 
+For a more detailed bio, check out the [About](/about) section. [Portfolio](/portfolio) is where I've got my most substantial projects, and I'll be updating it as I continue to work. To get in touch, my details can be found in the [Contact](/contact) section. Finally, [Recent Projects](/recent) contains smaller projects, mostly P5.js sketches I've been doing. 
 
 ### About the site
 This site is built off React JS, deployed through Netlify. Most of the text portions are .md documents imported into React with `react-markdown`, to save time and pain with styling, save for the Recent section; in order to stay away from using `dangerouslySetInnerHTML` to be able to use iFrame units, it's worth the trade off to just keep the text simple. Aside from that, and some styling, things are fairly basic here. 

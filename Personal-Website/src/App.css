@@ -86,6 +86,14 @@ nav a:hover {
     grid-template-areas: ". ContentBox sidebar .";
 }
 
+.Page {
+    padding-top: 1em;
+    gap: 4em;
+    display: grid;
+    grid-template-columns: .5fr 5fr .5fr;
+    grid-template-areas: ". ContentBox .";
+}
+
 .ContentBox{
     grid-area: ContentBox;
     background-color: #A0CFC7;

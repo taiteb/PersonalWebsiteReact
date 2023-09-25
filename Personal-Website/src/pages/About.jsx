@@ -10,8 +10,17 @@ export default function About() {
             .then((text) => setContent(text));
     }, []);
 
-    return (<div className="Page">
-        <div className="ContentBox About">
+    return (<div className="Page About">
+        <aside className="IconContainer">
+            <img className="ProfilePhoto" src="/IMG_0883.jpg" alt="a polaroid of myself" />
+            <img className="SkillIcon" src="/css3-alt.svg" alt="CSS icon"></img>
+            <img className="SkillIcon" src="/html5.svg"alt="HTML5 icon"></img>
+            <img className="SkillIcon" src="/js.svg" alt="JavaScript icon"></img>
+            <img className="SkillIcon" src="/node-js.svg" alt="Node.js icon"></img>
+            <img className="SkillIcon" src="/react.svg" alt="React icon"></img>
+            <img className="SkillIcon" src="/github.svg" alt="GitHub icon"></img>
+        </aside>
+        <div className="ContentBox">
             <ReactMarkdown children={content} />
         </div>
     </div>)

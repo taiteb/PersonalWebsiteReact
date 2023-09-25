@@ -1,5 +1,4 @@
 ### About Me
-![html5](/html5.svg) ![js](/js.svg) ![css3-alt](/css3-alt.svg) ![github](/github.svg) ![react](/react.svg) ![node-js](/node-js.svg)
 
 I've always been around tech, and for a long time, I'd simply taken it for granted. My dad did data center management, so computers were always in the house. We had servers in our basement (we once lost **all of our** digital family photos that were stored on them after a corruption- lesson learned in having redundant backups). The first time I was taught shell commands in linux was in second grade, to use sudo apt-get install to put a freeware Mario Kart clone on my hand-me-down dell laptop. I learned inspect element tools in middle school to fake millions of followers on YouTube and to change headlines to make my friends laugh. I participated in hackathons in high school, learned python, and voraciously learned CAD in my engineering classes. 
 

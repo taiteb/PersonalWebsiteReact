@@ -153,9 +153,28 @@ h3 {
     width: fit-content;
 }
 
-.About img {
-    width: 50px;
+.About {
+    display: grid;
+    grid-template-columns: .5fr 1fr 5fr .5fr;
+    grid-template-areas: ". IconContainer ContentBox .";
+}
+
+.IconContainer {
+    grid-area: IconContainer;
+    display: inline-block;
+}
+
+.ProfilePhoto {
+    max-width: 100%;
+    border: 2px solid #3C2A3C;
+    border-left-width: 5px;
+    border-bottom-width: 5px;
+    border-radius: 10px;
+}
+
+.SkillIcon {
+    width: 30%;
     height: auto;
     padding: .8em;
-    color: #3C2A3C;
+    filter: invert(29%) sepia(71%) saturate(369%) hue-rotate(166deg) brightness(97%) contrast(93%);
 }

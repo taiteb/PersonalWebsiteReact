@@ -1,6 +1,6 @@
 ### Welcome to my website! 
 
-I'm a full-stack web developer, having graduated from FullStack Academy in partnership with Colorado State University. I appreciate your interest in my work, and I hope this serves as a showcase for my abilities. No templates or pre-designed components have been used
+I'm a full-stack web developer, having graduated from FullStack Academy in partnership with Colorado State University. I appreciate your interest in my work, and I hope this serves as a showcase for my abilities. No templates or pre-designed components have been used.
 
 For a more detailed bio, check out the [About](/about) section. [Portfolio](/portfolio) is where I've got my most substantial projects, and I'll be updating it as I continue to work. To get in touch, my details can be found in the [Contact](/contact) section. Finally, [Recent Projects](/recent) contains smaller projects, mostly P5.js sketches I've been doing. 
 

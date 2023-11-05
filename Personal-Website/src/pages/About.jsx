@@ -11,8 +11,8 @@ export default function About() {
     }, []);
 
     return (<div className="Page About">
+        <img className="ProfilePhoto" src="/IMG_0883.jpg" alt="a polaroid of myself" />
         <aside className="IconContainer">
-            <img className="ProfilePhoto" src="/IMG_0883.jpg" alt="a polaroid of myself" />
             <img className="SkillIcon" src="/css3-alt.svg" alt="CSS icon"></img>
             <img className="SkillIcon" src="/html5.svg"alt="HTML5 icon"></img>
             <img className="SkillIcon" src="/js.svg" alt="JavaScript icon"></img>

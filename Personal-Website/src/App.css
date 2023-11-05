@@ -2,10 +2,17 @@
     font-family: 'Inter', sans-serif;
 }
 
-@supports (font-variation-settings: normal) {
+/* @supports (font-variation-settings: normal) {
     :root {
         font-family: 'Inter var', sans-serif;
     }
+} */
+
+@font-face {
+    font-family: 'Vis-A-Vis-bold';
+    src: local('Vis-A-Vis-bold'), url(./fonts/Vis-A-Vis-bold.ttf) format('truetype');
+    font-family: 'Zschusch_light';
+    src: local('Zschusch_light'), url(./Fonts/Zschusch_light.ttf) format('truetype');
 }
 
 html {
@@ -25,9 +32,11 @@ header {
     height: 15vh;
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
     margin-bottom: 2em;
     margin-top: 0;
+    position: sticky;
+    top: -6.5em;
 }
 
 nav {
@@ -56,10 +65,14 @@ header iframe {
 header h1 {
     position: absolute;
     z-index: 1;
-    font-size: 5em;
-    font-family: 'Lilita One', cursive;
-    font-style: bold;
-    color: #FAF9F9
+    font-size: 6em;
+    /* font-family: 'Lilita One', cursive; */
+    font-family: 'Zschusch_light';
+    /* letter-spacing: .5em; */
+    /* font-style: bold; */
+    font-weight: 100;
+    color: #3C2A3C;
+    cursor: default;
 }
 
 .links a {
@@ -94,7 +107,7 @@ nav a:hover {
     grid-template-areas: ". ContentBox .";
 }
 
-.ContentBox{
+.ContentBox {
     grid-area: ContentBox;
     background-color: #A0CFC7;
     color: #335C81;
@@ -115,11 +128,11 @@ aside {
     grid-column: span 2;
 }
 
-.ImageGallery{
+.ImageGallery {
     display: inline-block;
 }
 
-.ImageGallery img{
+.ImageGallery img {
     max-width: 100%;
     padding: 12px;
 }
@@ -156,15 +169,19 @@ h3 {
 .About {
     display: grid;
     grid-template-columns: .5fr 1fr 5fr .5fr;
-    grid-template-areas: ". IconContainer ContentBox .";
+    grid-template-areas:
+        ". ProfilePhoto ContentBox ."
+        ". IconContainer ContentBox .";
 }
 
 .IconContainer {
     grid-area: IconContainer;
-    display: inline-block;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .ProfilePhoto {
+    grid-area: ProfilePhoto;
     max-width: 100%;
     border: 2px solid #3C2A3C;
     border-left-width: 5px;
@@ -173,8 +190,7 @@ h3 {
 }
 
 .SkillIcon {
-    width: 30%;
-    height: auto;
-    padding: .8em;
+    width: 85%;
+    height: fit-content;
     filter: invert(29%) sepia(71%) saturate(369%) hue-rotate(166deg) brightness(97%) contrast(93%);
 }

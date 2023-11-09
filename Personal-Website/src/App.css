@@ -9,10 +9,18 @@
 } */
 
 @font-face {
-    font-family: 'Vis-A-Vis-bold';
-    src: local('Vis-A-Vis-bold'), url(./fonts/Vis-A-Vis-bold.ttf) format('truetype');
     font-family: 'Zschusch_light';
     src: local('Zschusch_light'), url(./Fonts/Zschusch_light.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'TGL0-17';
+    src: local('TGL0-17'), url(./Fonts/TGL0-17.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Movement-DirectBlack';
+    src: local('Movement-DirectBlack'), url(./Fonts/Movement-DirectBlack.woff2) format('woff2');
 }
 
 html {
@@ -68,8 +76,6 @@ header h1 {
     font-size: 6em;
     /* font-family: 'Lilita One', cursive; */
     font-family: 'Zschusch_light';
-    /* letter-spacing: .5em; */
-    /* font-style: bold; */
     font-weight: 100;
     color: #3C2A3C;
     cursor: default;
@@ -91,14 +97,6 @@ nav a:hover {
     transform: scale(1.03);
 }
 
-.Home {
-    padding-top: 1em;
-    gap: 4em;
-    display: grid;
-    grid-template-columns: .5fr 5fr 2fr .5fr;
-    grid-template-areas: ". ContentBox sidebar .";
-}
-
 .Page {
     padding-top: 1em;
     gap: 4em;
@@ -118,6 +116,7 @@ nav a:hover {
     border-radius: 10px;
     font-size: 1.3em;
     width: fit-content;
+    height: fit-content;
 }
 
 aside {
@@ -128,41 +127,22 @@ aside {
     grid-column: span 2;
 }
 
-.ImageGallery {
-    display: inline-block;
-}
-
-.ImageGallery img {
-    max-width: 100%;
-    padding: 12px;
-}
-
-
 h2 {
-    font-size: 1.5em;
-    font-weight: 900;
-    border: 2px outset #54B6A0;
-    border-left-width: 4px;
-    border-bottom-width: 4px;
-    border-radius: 10px;
+    font-family: 'TGL0-17';
+    font-size: 2em;
+    font-weight: 300;
     padding: 8px 5px;
     margin: 5px;
-    text-align: center;
-    color: #FAF9F9;
-    background: #7EC8B8;
+    color: #3C2A3C;
     width: fit-content;
 }
 
 h3 {
-    border-radius: 10px;
-    border: 2px outset #54B6A0;
-    border-left-width: 4px;
-    border-bottom-width: 4px;
+    font-family: 'TGL0-17';
     padding: 8px 5px;
     margin: 5px;
-    text-align: center;
-    color: #FAF9F9;
-    background: #7EC8B8;
+    text-align: left;
+    color: #3C2A3C;
     width: fit-content;
 }
 
@@ -192,5 +172,71 @@ h3 {
 .SkillIcon {
     width: 85%;
     height: fit-content;
+    filter: invert(29%) sepia(71%) saturate(369%) hue-rotate(166deg) brightness(97%) contrast(93%);
+}
+
+.Home {
+    padding-top: 1em;
+    gap: 2em;
+    display: grid;
+    grid-template-columns: .25fr 5fr 2fr .25fr;
+    grid-template-areas: 
+        ". Identity Identity ."
+        ". ContentBox sidebar ."
+        ". ContentBox Links .";
+}
+
+.Identity {
+    grid-area: Identity;
+    /* padding: 25px; */
+    font-size: 2em;
+    /* background-color: #a2b3b2; */
+}
+
+.Identity h2{
+    font-family: 'Movement-DirectBlack';
+    width: 100%;
+}
+
+.Identity :nth-child(1) {
+    /* width: 100%; */
+    text-align: left;
+}
+
+.Identity :nth-child(2) {
+    /* width: 100%; */
+    text-align: center;
+}
+
+.Identity :nth-child(3) {
+    /* width: 100%; */
+    text-align: right;
+}
+
+.ImageGallery {
+    width: 100%;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.ImageGallery img {
+    max-width: 100%;
+    background:#FAF9F9;
+    border: 2px solid #3C2A3C;
+    border-left-width: 3px;
+    border-bottom-width: 3px;
+    border-radius: 8px;
+}
+
+.Links {
+    grid-area: Links;
+    gap: 3em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.Links img{
+    width: 100%;
     filter: invert(29%) sepia(71%) saturate(369%) hue-rotate(166deg) brightness(97%) contrast(93%);
 }

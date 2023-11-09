@@ -10,7 +10,10 @@ export default function About() {
             .then((text) => setContent(text));
     }, []);
 
-    return (<div className="TextFill">
-        <ReactMarkdown children={content} />
+    return (<div>
+        <h1>Portfolio</h1>
+        <div className="ContentBox">
+            <ReactMarkdown children={content} />
+        </div>
     </div>)
 }

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { ReactMarkdown } from "react-markdown/lib/react-markdown"
+import profile from '../Highlights/IMG_0883.jpg'
 
 export default function About() {
     const [content, setContent] = useState('');
@@ -11,7 +12,7 @@ export default function About() {
     }, []);
 
     return (<div className="Page About">
-        <img className="ProfilePhoto" src="/IMG_0883.jpg" alt="a polaroid of myself" />
+        <img className="ProfilePhoto" src={profile} alt="a polaroid of myself" />
         <aside className="IconContainer">
             <img className="SkillIcon" src="/css3-alt.svg" alt="CSS icon"></img>
             <img className="SkillIcon" src="/html5.svg"alt="HTML5 icon"></img>

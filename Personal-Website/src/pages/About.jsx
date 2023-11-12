@@ -1,28 +1,36 @@
 import { useEffect, useState } from "react"
-import { ReactMarkdown } from "react-markdown/lib/react-markdown"
 import profile from '../Highlights/IMG_0883.jpg'
 
 export default function About() {
     const [content, setContent] = useState('');
+    const wordPressURL = 'https://public-api.wordpress.com/rest/v1.1/sites/taitemcgrady.wordpress.com/posts/48'
 
-    useEffect(() => {
-        fetch('/About.md')
-            .then((res) => res.text())
-            .then((text) => setContent(text));
+    const wordPressImport = useEffect(() => {
+        const wordFetch = async () => {
+            try {
+                const response = await fetch(wordPressURL);
+                const result = await response.json()
+                setContent(result)
+            } catch (error) {
+                error(error)
+            }
+        }
+        wordFetch();
+        console.log(content);
     }, []);
 
     return (<div className="Page About">
         <img className="ProfilePhoto" src={profile} alt="a polaroid of myself" />
         <aside className="IconContainer">
             <img className="SkillIcon" src="/css3-alt.svg" alt="CSS icon"></img>
-            <img className="SkillIcon" src="/html5.svg"alt="HTML5 icon"></img>
+            <img className="SkillIcon" src="/html5.svg" alt="HTML5 icon"></img>
             <img className="SkillIcon" src="/js.svg" alt="JavaScript icon"></img>
             <img className="SkillIcon" src="/node-js.svg" alt="Node.js icon"></img>
             <img className="SkillIcon" src="/react.svg" alt="React icon"></img>
             <img className="SkillIcon" src="/github.svg" alt="GitHub icon"></img>
         </aside>
         <div className="ContentBox">
-            <ReactMarkdown children={content} />
+            {content.content}
         </div>
     </div>)
 }

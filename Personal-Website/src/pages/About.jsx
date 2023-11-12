@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react"
+import DOMPurify from 'dompurify';
 import profile from '../Highlights/IMG_0883.jpg'
+
 
 export default function About() {
     const [content, setContent] = useState('');
-    const wordPressURL = 'https://public-api.wordpress.com/rest/v1.1/sites/taitemcgrady.wordpress.com/posts/48'
+    const [sanitizedContent, setSanitizedContent] = useState('');
+    const wordPressURL = 'https://public-api.wordpress.com/rest/v1.1/sites/taitemcgrady.wordpress.com/posts/48';
 
     const wordPressImport = useEffect(() => {
         const wordFetch = async () => {
@@ -16,8 +19,12 @@ export default function About() {
             }
         }
         wordFetch();
-        console.log(content);
+        const _sanitized = DOMPurify.sanitize(content.content)
+        setSanitizedContent(_sanitized)
+        console.log(sanitizedContent)
     }, []);
+
+    const wpContent = {__html: sanitizedContent}
 
     return (<div className="Page About">
         <img className="ProfilePhoto" src={profile} alt="a polaroid of myself" />
@@ -29,8 +36,9 @@ export default function About() {
             <img className="SkillIcon" src="/react.svg" alt="React icon"></img>
             <img className="SkillIcon" src="/github.svg" alt="GitHub icon"></img>
         </aside>
-        <div className="ContentBox">
-            {content.content}
-        </div>
+        <div
+            className="ContentBox"
+            dangerouslySetInnerHTML={wpContent}
+        />
     </div>)
 }

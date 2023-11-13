@@ -1,7 +1,46 @@
+import { useState, useEffect } from "react";
+import DOMPurify from "dompurify";
+
 export default function Recent() {
+    const [content, setContent] = useState('');
+    const [sanitizedContent, setSanitizedContent] = useState('');
+    const wordPressURL = 'https://public-api.wordpress.com/rest/v1.1/sites/taitemcgrady.wordpress.com/posts/?category=Generative Art';
+
+    const wordPressImport = useEffect(() => {
+        const wordFetch = async () => {
+            try {
+                const response = await fetch(wordPressURL);
+                const result = await response.json();
+                setContent(result)
+            } catch (error) {
+                error(error)
+            }
+        }
+        wordFetch();
+        console.log(content)
+        // const _sanitized = DOMPurify.sanitize(posts.posts)
+        // setSanitizedContent(_sanitized)
+        // console.log(sanitizedContent)
+    }, []);
+
+    // const wpContent = {__html: sanitizedContent}
+    // console.log(content.posts[0].content)
+    // console.log(content)
+
+
     return (
         <div className="ProjectShowcase">
-            <h2>Recent projects:</h2>
+
+            {!content ? <p>Loading...</p> : content.posts.map((post) => {
+                const _sanitizedContent = DOMPurify.sanitize(post.content);
+                const wpContent = { __html: _sanitizedContent };
+                return (<div className="RecentPost">
+                    <h2>{post.title}</h2>
+                        <div className="ContentBox" dangerouslySetInnerHTML={wpContent}></div>
+                    </div>)
+            })
+            }
+            {/* <h2>Recent projects:</h2>
             <div className="ProjectDisplay" >
                 <iframe src="https://taiteb.github.io/Half-Tone-Random-Walk/" frameborder="0"></iframe>
                 <p>
@@ -27,6 +66,6 @@ export default function Recent() {
             </div>
             <div className="ProjectDisplay">
                 <iframe src="https://taiteb.github.io/Working-with-Agents/" frameborder="0"></iframe>
-            </div>
+            </div> */}
         </div>)
 }

@@ -19,12 +19,16 @@ export default function About() {
             }
         }
         wordFetch();
-        const _sanitized = DOMPurify.sanitize(content.content)
-        setSanitizedContent(_sanitized)
-        console.log(sanitizedContent)
     }, []);
 
-    const wpContent = {__html: sanitizedContent}
+    const sanitizeWP = (dirty) =>{
+        const _sanitized = DOMPurify.sanitize(dirty.content);
+        const wpContent = {__html: _sanitized}
+        return wpContent;
+    }
+
+    const wpContent = sanitizeWP(content);
+   
 
     return (<div className="Page About">
         <img className="ProfilePhoto" src={profile} alt="a polaroid of myself" />
@@ -36,9 +40,10 @@ export default function About() {
             <img className="SkillIcon" src="/react.svg" alt="React icon"></img>
             <img className="SkillIcon" src="/github.svg" alt="GitHub icon"></img>
         </aside>
+        {!content? <p>Loading...</p> : 
         <div
             className="ContentBox"
             dangerouslySetInnerHTML={wpContent}
-        />
+        />}
     </div>)
 }

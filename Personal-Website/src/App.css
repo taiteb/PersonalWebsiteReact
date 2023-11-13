@@ -116,6 +116,7 @@ nav a:hover {
     width: fit-content;
     height: fit-content;
     display: grid;
+    line-height: 1.8
 }
 
 aside {
@@ -309,7 +310,7 @@ h3 {
 .RecentPost p {
     margin-left: 5vw;
     margin-right: 5vw;
-    font-size: 1.3em;
+    /* font-size: 1.3em; */
     box-sizing: border-box;
 }
 

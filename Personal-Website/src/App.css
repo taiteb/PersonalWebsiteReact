@@ -31,20 +31,19 @@ header {
     border-radius: 5px;
     border-top-right-radius: 0px;
     border-top-left-radius: 0px;
-    border-bottom-right-radius: 50px;
     border: 2px solid #3C2A3C;
     border-left-width: 5px;
     border-bottom-width: 5px;
-    padding: 5px;
+    padding: .25em;
     background-color: #7EC8B8;
-    height: 15vh;
+    /* height: 15vh; */
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 2em;
     margin-top: 0;
     position: sticky;
-    top: -9vh;
+    top: -6em;
+    margin-bottom: 5em;
 }
 
 nav {
@@ -65,9 +64,8 @@ header iframe {
     width: 100%;
     height: 100%;
     border: none;
-    padding-right: 10;
-    border-radius: 5px;
-    border-bottom-right-radius: 50px
+    /* padding-right: 10; */
+    border-radius: 8px;
 }
 
 header h1 {

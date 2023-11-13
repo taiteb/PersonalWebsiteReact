@@ -43,7 +43,7 @@ export default function About() {
             <img className="SkillIcon" src="/github.svg" alt="GitHub icon"></img>
         </aside>
         {/* Checks if fetch is complete, then loads sanitized dangerouslyset post from WP */}
-        {!content ? <p className="AboutMe">Loading...</p> :
+        {!content ? <p className="ContentBox AboutMe">Loading...</p> :
         <div className="AboutMe">
             <h2 className="Title">About Me</h2>
             <div

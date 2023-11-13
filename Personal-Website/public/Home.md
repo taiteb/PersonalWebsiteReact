@@ -1,4 +1,3 @@
-## About the site
 This site is built off React JS, deployed through Netlify. No pre-built templates or UI components. Most of the text portions are .md documents imported into React with `react-markdown`, to save time and pain with styling. 
 
 The banner up above is a GitHub Sites-hosted sketch of mine using P5.JS, an extensive visual library for JavaScript. Right around the beginning of bootcamp, I started learning P5 to brush up on my JavaScript skills, and since then it's been great practice to continue to play around with it. I see a lot of potential in using it as I have in my header- small elements of visual flair that are unique on each render, that keep a webpage fresh each time you see it. In a modern web that's constantly becoming more dynamic, more immersive, and more emotive, I think this provides a great path for engaging front-end design. 

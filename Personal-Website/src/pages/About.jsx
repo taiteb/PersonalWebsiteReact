@@ -5,7 +5,6 @@ import profile from '../Highlights/IMG_0883.jpg'
 
 export default function About() {
     const [content, setContent] = useState('');
-    const [sanitizedContent, setSanitizedContent] = useState('');
     const wordPressURL = 'https://public-api.wordpress.com/rest/v1.1/sites/taitemcgrady.wordpress.com/posts/48';
 
     const wordPressImport = useEffect(() => {
@@ -21,14 +20,17 @@ export default function About() {
         wordFetch();
     }, []);
 
-    const sanitizeWP = (dirty) =>{
+
+    // WP returns these posts as html. They are sanitized on the off chance something gets through
+    // Sanitized posts are then dangerouslyset
+    const sanitizeWP = (dirty) => {
         const _sanitized = DOMPurify.sanitize(dirty.content);
-        const wpContent = {__html: _sanitized}
+        const wpContent = { __html: _sanitized }
         return wpContent;
     }
 
     const wpContent = sanitizeWP(content);
-   
+
 
     return (<div className="Page About">
         <img className="ProfilePhoto" src={profile} alt="a polaroid of myself" />
@@ -40,10 +42,14 @@ export default function About() {
             <img className="SkillIcon" src="/react.svg" alt="React icon"></img>
             <img className="SkillIcon" src="/github.svg" alt="GitHub icon"></img>
         </aside>
-        {!content? <p>Loading...</p> : 
-        <div
-            className="ContentBox"
-            dangerouslySetInnerHTML={wpContent}
-        />}
+        {/* Checks if fetch is complete, then loads sanitized dangerouslyset post from WP */}
+        {!content ? <p className="AboutMe">Loading...</p> :
+        <div className="AboutMe">
+            <h2 className="Title">About Me</h2>
+            <div
+                className="ContentBox"
+                dangerouslySetInnerHTML={wpContent}
+            />
+            </div>}
     </div>)
 }

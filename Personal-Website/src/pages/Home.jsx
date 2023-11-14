@@ -4,6 +4,7 @@ import pic2010 from '../Highlights/2010.png';
 import pic4100 from '../Highlights/4100.png';
 import pic3317 from '../Highlights/3317.png';
 import pic26244 from '../Highlights/26244.png';
+import Contact from "./Contact";
 
 export default function Home() {
     const [content, setContent] = useState('');
@@ -21,32 +22,28 @@ export default function Home() {
             <h2>Music Geek</h2>
         </div>
 
-        <div className="GenArtHighlight">
-            <h2 className="Title">Generative Art Highlights</h2>
-            <div className="ContentBox">
-                <div className="ImageGallery">
-                    <img src={pic2010} alt="" />
-                    <img src={pic26244} alt="" />
-                    <img src={pic3317} alt="" />
-                    <img src={pic4100} alt="" />
+        <div className="MainPage">
+            <div className="GenArtHighlight">
+                <h2 className="Title">Generative Art Highlights</h2>
+                <div className="ContentBox">
+                    <div className="ImageGallery">
+                        <img src={pic2010} alt="" />
+                        <img src={pic26244} alt="" />
+                        <img src={pic3317} alt="" />
+                        {/* <img src={pic4100} alt="" /> */}
+                        <iframe src="https://taiteb.github.io/8-24-23/" scrolling='no' width='100%' height='100%' ></iframe>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <aside>
-            <h2 className="Title">About the site</h2>
-            <div className="ContentBox">
-                <ReactMarkdown children={content} />
+            <div className="Site-About">
+                <h2 className="Title">About the site</h2>
+                <div className="ContentBox">
+                    <ReactMarkdown children={content} />
+                </div>
             </div>
-        </aside>
 
-        <div className="Links">
-            <a href="https://www.linkedin.com/in/taite-mcgrady/">
-                <img className="LinkIcon" src="/linkedin.svg" alt="CSS icon"></img>
-            </a>
-            <a href="https://www.github.com/taiteb">
-                <img className="LinkIcon" src="/github.svg" alt="CSS icon"></img>
-            </a>
+            <Contact />
         </div>
     </div>)
 }

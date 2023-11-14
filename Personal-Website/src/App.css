@@ -119,10 +119,6 @@ nav a:hover {
     line-height: 1.8
 }
 
-aside {
-    grid-area: sidebar;
-}
-
 .TextFill {
     grid-column: span 2;
 }
@@ -147,35 +143,42 @@ h3 {
 }
 
 .About {
+    gap: 2em;
     display: grid;
-    grid-template-columns: .5fr 1fr 5fr .5fr;
-    grid-template-areas:
-        ". ProfilePhoto AboutMe ."
-        ". IconContainer AboutMe .";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin-left: 20vw;
+    margin-right: 20vw;
 }
 
 .AboutMe {
-    grid-area: AboutMe;
+    grid-row: 1;
+    grid-column-start: 2;
+    grid-column-end: span 3;
+    grid-row-end: span 2;
 }
 
 .IconContainer {
-    grid-area: IconContainer;
+    grid-column-start: 1;
+    grid-row: 1;
+    grid-row-end: span 1;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 1em;
 }
 
 .ProfilePhoto {
-    grid-area: ProfilePhoto;
     max-width: 100%;
     border: 2px solid #3C2A3C;
     border-left-width: 5px;
     border-bottom-width: 5px;
     border-radius: 10px;
+    grid-column: span 2;
 }
 
 .SkillIcon {
-    width: 85%;
-    height: fit-content;
+    width: 100%;
     filter: invert(29%) sepia(71%) saturate(369%) hue-rotate(166deg) brightness(97%) contrast(93%);
 }
 
@@ -183,16 +186,37 @@ h3 {
     padding-top: 1em;
     gap: 2em;
     display: grid;
-    grid-template-columns: .25fr 5fr 2fr .25fr;
+    grid-template-columns: .25fr 1fr .25;
     grid-template-areas:
-        ". Identity Identity ."
-        ". GenArtHighlight sidebar ."
-        ". GenArtHighlight Links .";
+        ". Identity ."
+        ". MainPage .";
 }
 
+.MainPage {
+    grid-area: MainPage;
+    display: grid; 
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2em;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    align-items: stretch;
+}
+
+.Site-About {
+    /* grid-area: sidebar; */
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.Site-About .ContentBox {
+    align-self: stretch;
+}
+
+
 .GenArtHighlight {
-    grid-area: GenArtHighlight;
-    font-size: 1.7em;
+    /* grid-area: GenArtHighlight; */
+    /* font-size: 1.7em; */
+    grid-column: span 3;
 }
 
 .Identity {
@@ -205,6 +229,7 @@ h3 {
 .Identity h2 {
     font-family: 'Movement-DirectBlack';
     width: 100%;
+    margin-top: -.75em;
 }
 
 .Identity :nth-child(1) {
@@ -230,7 +255,7 @@ h3 {
     grid-template-columns: 1fr 1fr;
 }
 
-.ImageGallery img {
+.ImageGallery > * {
     max-width: 100%;
     background: #FAF9F9;
     border: 2px solid #3C2A3C;
@@ -241,13 +266,16 @@ h3 {
 
 .Links {
     grid-area: Links;
-    gap: 3em;
+    gap: .8em;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
 .Links img {
-    width: 100%;
+    width: 80px;
+    max-height: 80%;
+    height: auto;
+
     filter: invert(29%) sepia(71%) saturate(369%) hue-rotate(166deg) brightness(97%) contrast(93%);
 }
 
@@ -280,8 +308,8 @@ h3 {
     /* padding-top: 1em; */
     gap: 2em;
     display: inline-flexbox;
-    padding-left: 10vw;
-    padding-right: 15vw;
+    padding-left: 25vw;
+    padding-right: 25vw;
 }
 
 .Title {
@@ -295,6 +323,7 @@ h3 {
     padding: 8px;
     margin-bottom: -15px;
     margin-left: -8px;
+    width: fit-content;
 }
 
 .RecentPost {
@@ -316,4 +345,19 @@ h3 {
 
 .RecentPost p:first-child {
     padding-top: 1em;
+}
+
+.BusinessCard {
+    width: 100%;
+    /* grid-area: Contact; */
+    display: inline-flexbox;
+    font-family: monospace;
+}
+
+.BusinessCard a {
+    text-decoration: none;
+}
+
+.BusinessCard li {
+    text-align: left;
 }

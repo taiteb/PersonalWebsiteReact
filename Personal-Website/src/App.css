@@ -178,6 +178,7 @@ h3 {
 }
 
 .SkillIcon {
+    z-index: -1;
     width: 100%;
     filter: invert(29%) sepia(71%) saturate(369%) hue-rotate(166deg) brightness(97%) contrast(93%);
 }
@@ -266,19 +267,29 @@ h3 {
 
 .Links {
     grid-area: Links;
-    gap: .8em;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr; 
+    align-items: start;
+    justify-items: left;
 }
 
-.Links img {
-    width: 80px;
-    max-height: 80%;
+.Links :first-child {
+    width: 80%;
+    max-height: 80px;
     height: auto;
+    margin-top: .2em;
+    /* justify-self: center; */
+}
 
+.LinkIcon {
     filter: invert(29%) sepia(71%) saturate(369%) hue-rotate(166deg) brightness(97%) contrast(93%);
 }
 
+.Links :nth-child(even) {
+    border-bottom: #335C81 solid;
+    color: #335C81;
+    align-self: self-end;
+}
 
 .wp-block-gallery {
     display: flex;
@@ -352,6 +363,10 @@ h3 {
     /* grid-area: Contact; */
     display: inline-flexbox;
     font-family: monospace;
+}
+
+.MainPage .BusinessCard {
+    grid-column: span 2;
 }
 
 .BusinessCard a {

@@ -1,0 +1,5 @@
+# PersonalWebsiteReact
+
+This is a React refactor of a project that was done in vanilla HTML/JS for my web development class. I used Wordpress as a headless CMS using their public API, so I can continue to update and post my recent projects as they come out. This is great for ease of management, editing, and for practicing a deployment that's often utilized for small businesses. The front end is built with React and vanilla CSS to make use of its async handling. 
+For the most part it's a complete overhaul, but the embedded P5.JS banner was an element of the initial site I knew had to be repurposed. Documentation for that project is also available [here](https://github.com/taiteb/gradientSweep). I wanted a subtle, but noticable, element of visual flair, and it's slightly different every time the page refreshes. Colors are chosen at random but within constraints that keep it cohesive with the rest of the graphic language used in the site. 
+No templates or pre-designed UI components were used. All styling, palette, and design choices were made by me. 

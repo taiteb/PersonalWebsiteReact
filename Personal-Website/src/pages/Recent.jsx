@@ -1,16 +1,39 @@
+import { useState, useEffect } from "react";
+import DOMPurify from "dompurify";
+
 export default function Recent() {
-    return (<div className="ProjectShowcase">
-        <h2>Recent projects:</h2>
-        <div id="projectDisplay" >
-            <iframe src="https://taiteb.github.io/Half-Tone-Random-Walk/" frameborder="0"></iframe>
-            <p>
-                This project is probably the most fun I've had so far with making something from just a few base principles. 
-                I followed a tutorial on making a single random-walk generator, and from there I figured out how to turn it into a function I could call several times. I tweaked the color values, the size and spacing of the steps, and at a certain point it reminded me of the half-tone dots used in comics (and exaggerated by Roy Lichtenstein). 
-                Half-tone masks are angled at either 15, 45, or 75 degrees, and I figured out how to rotate the cartesian coordinates (on an instance basis) by one of the mask angle values. While this isn't a faithful recreation of true half-tone, it's reminiscent of the effect- which is what I intended.
-            </p>
-        </div>
-        <iframe src="https://taiteb.github.io/8-24-23/" frameborder="0"></iframe>
-        <iframe src="https://taiteb.github.io/maze-challenge/" frameborder="0"></iframe>
-        <iframe src="https://taiteb.github.io/Working-with-Agents/" frameborder="0"></iframe>
-    </div>)
+    const [content, setContent] = useState('');
+    const wordPressURL = 'https://public-api.wordpress.com/rest/v1.1/sites/taitemcgrady.wordpress.com/posts/?category=Generative Art';
+
+    const wordPressImport = useEffect(() => {
+        // Fetches from URL above, which has a filter for my WP site's 'Gen Art' category
+        const wordFetch = async () => {
+            try {
+                const response = await fetch(wordPressURL);
+                const result = await response.json();
+                setContent(result)
+            } catch (error) {
+                error(error)
+            }
+        }
+        wordFetch();
+    }, []);
+
+
+    return (
+        <div className="ProjectShowcase">
+            {/* Checks if fetch is complete, then maps the "posts" list for individual posts */}
+            {/* WP returns these posts as html. They are sanitized on the off chance something gets through */}
+            {/* The title is returned as a string and doesn't need sanitizing */}
+            {/* Sanitized posts are then dangerouslyset */}
+            {!content ? <p className="RecentPost ContentBox">Loading...</p> : content.posts.map((post) => {
+                const _sanitizedContent = DOMPurify.sanitize(post.content);
+                const wpContent = { __html: _sanitizedContent };
+                return (<div className="RecentPost">
+                    <h2 className="Title">{post.title}</h2>
+                    <div className="ContentBox" dangerouslySetInnerHTML={wpContent}></div>
+                </div>)
+            })
+            }
+        </div>)
 }

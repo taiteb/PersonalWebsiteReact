@@ -27,22 +27,13 @@ export default function Home() {
                 <h2 className="Title">Generative Art Highlights</h2>
                 <div className="ContentBox">
                     <div className="ImageGallery">
-                        <img src={pic2010} alt="" />
-                        <img src={pic26244} alt="" />
-                        <img src={pic3317} alt="" />
-                        {/* <img src={pic4100} alt="" /> */}
+                        <img src='https://taitemcgrady.files.wordpress.com/2024/03/img_0295.png' alt="" />
+                        <img src='https://taitemcgrady.files.wordpress.com/2023/12/truchet20.png' alt="" />
+                        <img src='https://taitemcgrady.files.wordpress.com/2023/11/8440.png' alt="" />
                         <iframe src="https://taiteb.github.io/8-24-23/" scrolling='no' width='100%' height='100%' ></iframe>
                     </div>
                 </div>
             </div>
-
-            <div className="Site-About">
-                <h2 className="Title">About the site</h2>
-                <div className="ContentBox">
-                    <ReactMarkdown children={content} />
-                </div>
-            </div>
-
             <Contact />
         </div>
     </div>)

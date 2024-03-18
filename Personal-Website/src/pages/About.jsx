@@ -35,7 +35,7 @@ export default function About() {
     return (<div className="About">
         
         <div className="IconContainer">
-        <img className="ProfilePhoto" src={profile} alt="a polaroid of myself" />
+            <img className="ProfilePhoto" src={profile} alt="a polaroid of myself" />
             <img className="SkillIcon" src="/css3-alt.svg" alt="CSS icon"></img>
             <img className="SkillIcon" src="/html5.svg" alt="HTML5 icon"></img>
             <img className="SkillIcon" src="/js.svg" alt="JavaScript icon"></img>

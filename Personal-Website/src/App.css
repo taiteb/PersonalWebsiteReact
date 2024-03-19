@@ -344,8 +344,9 @@ h3 {
 
 @media screen and (max-width: 900px) {
     header h1 {
-        font-size: 4em;
+        font-size: clamp(2em, 1em, 6em);
         font-weight: 10;
+        justify-content: center;
     }
 }
 
@@ -359,5 +360,86 @@ h3 {
 
     .Identity {
         font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    nav {
+        font-size: .75em;
+        width: 100%;
+    }
+
+    body {
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+    }
+
+    .MainPage {
+        margin-left: 15px;
+        margin-right: 15px;
+        gap: 2px
+    }
+
+    .Identity {
+        width: 95%;
+        padding-left: 0px;
+        padding-right: 5px;
+    }
+
+    header {
+        margin-bottom: 0px;
+        top: -100px;
+    }
+
+    header iframe {
+        height: 128px;
+    }
+
+    h2 {
+        font-size: 1.75em;
+    }
+
+    .RecentPost h2 {
+        margin-top: 1em;
+        font-size: 1.75em;
+    }
+
+    .wp-block-gallery {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .ProjectShowcase {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 15px;
+    }
+
+    .ImageGallery {
+        grid-template-columns: 1fr;
+    }
+
+    .BusinessCard {
+        margin-top: 2em;
+    }
+
+    .About {
+        margin-top: 1em;
+        margin-left: 15px;
+        margin-right: 0;
+    }
+
+    .AboutMe {
+        grid-column-start: 1;
+    }
+
+    .IconContainer {
+        grid-row-start: auto;
+        grid-column-start: auto;
+        grid-column-end: span 3;
+        max-width: fit-content;
+        margin-left: 8px;
     }
 }

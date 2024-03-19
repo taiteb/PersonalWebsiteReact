@@ -6,7 +6,7 @@ import pic3317 from '../Highlights/3317.png';
 import pic26244 from '../Highlights/26244.png';
 import Contact from "./Contact";
 
-export default function Home() {
+export default function Home({handleScroll}) {
     const [content, setContent] = useState('');
 
     useEffect(() => {
@@ -15,7 +15,7 @@ export default function Home() {
             .then((text) => setContent(text));
     }, []);
 
-    return (<div className="Home">
+    return (<div className="Home" >
         <div className="Identity">
             <h2>Full Stack Dev</h2>
             <h2>Digital Artist</h2>

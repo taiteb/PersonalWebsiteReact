@@ -1,6 +1,6 @@
 export default function Contact() {
     return (<div className="BusinessCard">
-        <h1 className="Title">Contact Me</h1>
+        <h2 className="Title">Contact Me</h2>
         <div className="ContentBox">
             <div className="Links">
                 <a href="mailto:taitemcg@gmail.com">

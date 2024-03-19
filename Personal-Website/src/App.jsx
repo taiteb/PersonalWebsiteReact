@@ -39,7 +39,7 @@ function App() {
         <Link to='/about'>About</Link>
         <Link to='/portfolio'>Portfolio</Link>
         {/* <Link to='/contact'>Contact</Link> */}
-        <Link to='/recent'>Recent Projects</Link>
+        <Link to='/recent'>Projects</Link>
       </nav>
       <header role='banner' id='header'>
         <h1>Taite McGrady</h1>

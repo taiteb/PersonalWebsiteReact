@@ -2,6 +2,10 @@
     font-family: 'Inter', sans-serif;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 /* @supports (font-variation-settings: normal) {
     :root {
         font-family: 'Inter var', sans-serif;
@@ -28,21 +32,18 @@ html {
 }
 
 header {
-    border-radius: 5px;
+    /* border-radius: 5px; */
     border-top-right-radius: 0px;
     border-top-left-radius: 0px;
-    border: 2px solid #3C2A3C;
-    border-left-width: 5px;
-    border-bottom-width: 5px;
+    /* border: 2px solid rgba(60, 42, 60, 1.0); */
     padding: .25em;
     background-color: #7EC8B8;
-    /* height: 15vh; */
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 0;
     position: sticky;
-    top: -6em;
+    top: -258px;
     margin-bottom: 5em;
 }
 
@@ -50,19 +51,22 @@ nav {
     z-index: 3;
     position: sticky;
     top: 0;
-    background: #3C2A3C;
+    background-color: rgba(60, 42, 60, 1.0);
     display: flex;
     border: 2em;
     padding: .5em;
     flex-direction: row;
     justify-content: space-around;
+    font-family: 'TGL0-17';
+    font-size: 1em;
+    letter-spacing: .2rem;
 }
 
 header iframe {
     position: relative;
     z-index: 1;
     width: 100%;
-    height: 100%;
+    height: 300px;
     border: none;
     /* padding-right: 10; */
     border-radius: 8px;
@@ -86,7 +90,7 @@ header h1 {
     border: 2px;
     border-width: 2px;
     border-radius: 20px;
-    opacity: .85;
+    opacity: .9;
     transition: all 0.2s ease-in-out;
 }
 
@@ -105,19 +109,19 @@ nav a:hover {
 
 .ContentBox {
     grid-area: ContentBox;
-    background-color: #A0CFC7;
-    color: #335C81;
+    color: #3C2A3C;
     padding: 1em;
-    border: 2px solid #3C2A3C;
+    border: 0px solid #3C2A3C;
     border-left-width: 5px;
     border-bottom-width: 5px;
     border-radius: 10px;
-    font-size: 1.3em;
-    width: fit-content;
-    height: fit-content;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    font-size: 1.1em;
     display: grid;
     line-height: 1.8
 }
+
 
 .TextFill {
     grid-column: span 2;
@@ -145,10 +149,8 @@ h3 {
 .About {
     gap: 2em;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    margin-left: 20vw;
-    margin-right: 20vw;
+    justify-self: left;
+    margin-right: 10vw;
 }
 
 .AboutMe {
@@ -156,6 +158,8 @@ h3 {
     grid-column-start: 2;
     grid-column-end: span 3;
     grid-row-end: span 2;
+    max-width: 900px;
+    justify-self: left;
 }
 
 .IconContainer {
@@ -165,7 +169,10 @@ h3 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: start;
-    gap: 1em;
+    gap: 3em;
+    margin-left: 5vw;
+    margin-top: 5px;
+    max-width: 225px;
 }
 
 .ProfilePhoto {
@@ -196,55 +203,41 @@ h3 {
 .MainPage {
     grid-area: MainPage;
     display: grid; 
-    grid-template-columns: repeat(5, 1fr);
+    /* grid-template-columns: repeat(5, 1fr); */
     gap: 2em;
     margin-left: 10vw;
     margin-right: 10vw;
     align-items: stretch;
 }
 
-.Site-About {
-    /* grid-area: sidebar; */
-    grid-column: span 2;
-    grid-row: span 2;
-}
-
-.Site-About .ContentBox {
-    align-self: stretch;
-}
-
-
 .GenArtHighlight {
-    /* grid-area: GenArtHighlight; */
-    /* font-size: 1.7em; */
     grid-column: span 3;
+}
+
+.GenArtHighlight .ContentBox {
+    padding-top: 2em;
 }
 
 .Identity {
     grid-area: Identity;
-    /* padding: 25px; */
     font-size: 2em;
-    /* background-color: #a2b3b2; */
 }
 
 .Identity h2 {
     font-family: 'Movement-DirectBlack';
     width: 100%;
-    margin-top: -.75em;
+    margin-top: -.25em;
 }
 
 .Identity :nth-child(1) {
-    /* width: 100%; */
     text-align: left;
 }
 
 .Identity :nth-child(2) {
-    /* width: 100%; */
     text-align: center;
 }
 
 .Identity :nth-child(3) {
-    /* width: 100%; */
     text-align: right;
 }
 
@@ -265,30 +258,12 @@ h3 {
     border-radius: 8px;
 }
 
-.Links {
-    grid-area: Links;
-    display: grid;
-    grid-template-columns: 1fr 1fr; 
-    align-items: start;
-    justify-items: left;
-}
-
-.Links :first-child {
-    width: 80%;
-    max-height: 80px;
-    height: auto;
-    margin-top: .2em;
-    /* justify-self: center; */
+.ImageGallery .ContentBox {
+    margin-top: 1em;
 }
 
 .LinkIcon {
     filter: invert(29%) sepia(71%) saturate(369%) hue-rotate(166deg) brightness(97%) contrast(93%);
-}
-
-.Links :nth-child(even) {
-    border-bottom: #335C81 solid;
-    color: #335C81;
-    align-self: self-end;
 }
 
 .wp-block-gallery {
@@ -316,11 +291,9 @@ h3 {
 }
 
 .ProjectShowcase {
-    /* padding-top: 1em; */
     gap: 2em;
-    display: inline-flexbox;
-    padding-left: 25vw;
-    padding-right: 25vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
 }
 
 .Title {
@@ -339,40 +312,52 @@ h3 {
 
 .RecentPost {
     z-index: -1;
-    grid-area: RecentPost;
+    max-width: 900px;
     padding-bottom: 10vh;
+    justify-self: left;
 }
 
 .RecentPost h2 {
     font-size: 3em;
 }
 
-.RecentPost p {
-    margin-left: 5vw;
-    margin-right: 5vw;
-    /* font-size: 1.3em; */
-    box-sizing: border-box;
-}
-
 .RecentPost p:first-child {
     padding-top: 1em;
 }
 
-.BusinessCard {
-    width: 100%;
-    /* grid-area: Contact; */
-    display: inline-flexbox;
-    font-family: monospace;
-}
-
-.MainPage .BusinessCard {
-    grid-column: span 2;
-}
-
-.BusinessCard a {
+.Links {
+    padding-top: 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2em;
     text-decoration: none;
 }
 
-.BusinessCard li {
-    text-align: left;
+.BusinessCard {
+    grid-column-start: 3;
+}
+
+.BusinessCard img {
+    min-height: 75px;
+    max-height: 100px;
+}
+
+@media screen and (max-width: 900px) {
+    header h1 {
+        font-size: 4em;
+        font-weight: 10;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .Home {
+        padding-top: 1em;
+        gap: 0;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .Identity {
+        font-size: 1em;
+    }
 }

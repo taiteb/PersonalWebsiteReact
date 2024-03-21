@@ -7,10 +7,10 @@ export default function Contact() {
                     <img className="LinkIcon" src="/mail.svg" alt="Mail icon"></img>
                 </a>
                 <a href="https://www.linkedin.com/in/taite-mcgrady/">
-                    <img className="LinkIcon" src="/linkedin.svg" alt="LinkedIn icon"></img>
+                    <img className="LinkIcon" src="/linkedin.svg" alt="LinkedIn icon" target="_blank"></img>
                 </a>
                 <a href="https://www.github.com/taiteb">
-                    <img className="LinkIcon" src="/github.svg" alt="GitHub icon"></img>
+                    <img className="LinkIcon" src="/github.svg" alt="GitHub icon" target="_blank"></img>
                 </a>
             </div>
 

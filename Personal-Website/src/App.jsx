@@ -45,6 +45,9 @@ function App() {
         <h1>Taite McGrady</h1>
         <iframe src="https://taiteb.github.io/gradientSweep" scrolling='no' id='p5sketch'></iframe>
       </header>
+      
+      
+      
 
       <Routes>
         <Route path='/' element={<Home handleScroll={handleScroll} />} />
@@ -53,6 +56,8 @@ function App() {
         {/* <Route path='/Contact' element={<Contact />} /> */}
         <Route path='/recent' element={<Recent />} />
       </Routes>
+
+      <iframe src="https://taiteb.github.io/Truchet/" scrolling='no' className='background'></iframe>
     </>
   )
 }

@@ -32,7 +32,7 @@ html {
 }
 
 header {
-    /* border-radius: 5px; */
+    border-radius: 8px;
     border-top-right-radius: 0px;
     border-top-left-radius: 0px;
     /* border: 2px solid rgba(60, 42, 60, 1.0); */
@@ -41,7 +41,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 0;
+    margin-top: -3em;
     position: sticky;
     top: -258px;
     margin-bottom: 5em;
@@ -60,6 +60,8 @@ nav {
     font-family: 'TGL0-17';
     font-size: 1em;
     letter-spacing: .2rem;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
 header iframe {
@@ -135,6 +137,7 @@ nav a:hover {
     background-image: linear-gradient(to right, rgba(126, 200, 184, 1), rgba(126, 200, 184, 0.6));
     position: relative;
     z-index: -1;
+    margin: 0 1em 0 ;
 }
 
 
@@ -186,8 +189,7 @@ h3 {
     grid-template-columns: 1fr 1fr;
     align-items: start;
     gap: 3em;
-    margin-left: 5vw;
-    margin-top: 5px;
+    margin: .4em 0 0 3em;
     max-width: 225px;
 }
 
@@ -236,9 +238,12 @@ h3 {
 }
 
 .Identity {
+    justify-self: center;
+    width: 80vw;
     grid-area: Identity;
     font-size: 2em;
     padding: 2em 0;
+    max-width: 1200px;
 }
 
 .Identity h2 {
@@ -325,9 +330,9 @@ h3 {
     border-left-width: 5px;
     border-bottom-width: 3px;
     border-radius: 8px;
-    padding: 8px;
-    margin-bottom: -15px;
-    margin-left: -8px;
+    padding: .25em;
+    margin-bottom: -.5em;
+    margin-left: .25em;
     width: fit-content;
 }
 
@@ -376,8 +381,12 @@ h3 {
         margin-right: 0px;
     }
 
-    .Identity {
+    .Identity h2{
         font-size: 1em;
+    }
+
+    .IconContainer {
+        margin: .4em 3em 0;
     }
 }
 
@@ -401,8 +410,7 @@ h3 {
 
     .Identity {
         width: 95%;
-        padding-left: 0px;
-        padding-right: 5px;
+        padding-right: .5em;
     }
 
     header {
@@ -445,12 +453,12 @@ h3 {
 
     .About {
         margin-top: 1em;
-        margin-left: 15px;
         margin-right: 0;
     }
 
     .AboutMe {
         grid-column-start: 1;
+        margin-left: 1em;
     }
 
     .IconContainer {
@@ -458,6 +466,5 @@ h3 {
         grid-column-start: auto;
         grid-column-end: span 3;
         max-width: fit-content;
-        margin-left: 8px;
     }
 }

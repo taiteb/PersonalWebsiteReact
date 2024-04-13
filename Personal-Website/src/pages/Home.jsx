@@ -16,25 +16,26 @@ export default function Home({handleScroll}) {
     }, []);
 
     return (<div className="Home" >
-        <div className="Identity">
-            <h2>Full Stack Dev</h2>
-            <h2>Digital Artist</h2>
-            <h2>Music Geek</h2>
-        </div>
+        <h2 className="Identity">
+            <span>Full Stack Dev</span>
+            <br />
+            <span>Digital Artist</span>
+            <br />
+            <span>Music Geek</span>
+        </h2>
 
         <div className="MainPage">
             <div className="GenArtHighlight">
                 <h2 className="Title">Generative Art Highlights</h2>
                 <div className="ContentBox">
                     <div className="ImageGallery">
-                        <img src='https://taitemcgrady.files.wordpress.com/2024/03/img_0295.png' alt="" />
-                        <img src='https://taitemcgrady.files.wordpress.com/2023/12/truchet20.png' alt="" />
-                        <img src='https://taitemcgrady.files.wordpress.com/2023/11/8440.png' alt="" />
-                        <iframe src="https://taiteb.github.io/8-24-23/" scrolling='no' width='100%' height='100%' ></iframe>
+                        <img src='https://taitemcgrady.files.wordpress.com/2024/03/img_0295.png?w=1024' alt="Highlighted Generative Image 1" loading="lazy"/>
+                        <img src='https://taitemcgrady.files.wordpress.com/2023/12/truchet20.png?w=1024' alt="Highlighted Generative Image 2" loading="lazy"/>
+                        <img src='https://taitemcgrady.files.wordpress.com/2023/11/8440.png?w=1024' alt="Highlighted Generative Image 3" loading="lazy"/>
+                        <iframe src="https://taiteb.github.io/8-24-23/" scrolling='no' width='100%' height='100%' alt="Highlighted Generative live render" defer></iframe>
                     </div>
                 </div>
             </div>
-            <Contact />
         </div>
     </div>)
 }

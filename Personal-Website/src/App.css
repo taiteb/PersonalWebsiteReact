@@ -32,7 +32,7 @@ html {
 }
 
 header {
-    /* border-radius: 5px; */
+    border-radius: 8px;
     border-top-right-radius: 0px;
     border-top-left-radius: 0px;
     /* border: 2px solid rgba(60, 42, 60, 1.0); */
@@ -41,14 +41,16 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 0;
+    margin-top: -3em;
     position: sticky;
     top: -258px;
     margin-bottom: 5em;
+    /* position: relative; */
+    z-index: 2;
 }
 
 nav {
-    z-index: 3;
+    z-index: 4;
     position: sticky;
     top: 0;
     background-color: rgba(60, 42, 60, 1.0);
@@ -60,21 +62,23 @@ nav {
     font-family: 'TGL0-17';
     font-size: 1em;
     letter-spacing: .2rem;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
 header iframe {
-    position: relative;
-    z-index: 0;
     width: 100%;
     height: 300px;
     border: none;
     /* padding-right: 10; */
     border-radius: 8px;
+    position: relative;
+    z-index: 3;
 }
 
 header h1 {
     position: absolute;
-    z-index: 3;
+    z-index: 4;
     font-size: 6em;
     /* font-family: 'Lilita One', cursive; */
     font-family: 'Zschusch_light';
@@ -103,7 +107,7 @@ nav a:hover {
     position: fixed;
     width: 100%;
     height: 100%;
-    z-index: -20;
+    z-index: -1;
     border: 0px;
     top: 0px;
     left: 0;
@@ -134,7 +138,8 @@ nav a:hover {
     border-top-right-radius: 5em;
     background-image: linear-gradient(to right, rgba(126, 200, 184, 1), rgba(126, 200, 184, 0.6));
     position: relative;
-    z-index: -1;
+    z-index: 0;
+    margin: 0 1em 0 ;
 }
 
 
@@ -186,9 +191,13 @@ h3 {
     grid-template-columns: 1fr 1fr;
     align-items: start;
     gap: 3em;
-    margin-left: 5vw;
-    margin-top: 5px;
+    margin: .4em 0 0 3em;
     max-width: 225px;
+    color: #345b7b;
+}
+
+.IconContainer svg {
+    fill: currentColor
 }
 
 .ProfilePhoto {
@@ -203,7 +212,6 @@ h3 {
 .SkillIcon {
     z-index: -1;
     width: 100%;
-    filter: invert(29%) sepia(71%) saturate(369%) hue-rotate(166deg) brightness(97%) contrast(93%);
 }
 
 .Home {
@@ -236,27 +244,31 @@ h3 {
 }
 
 .Identity {
+    justify-self: center;
+    width: 90vw;
     grid-area: Identity;
     font-size: 2em;
-    padding: 2em 0;
+    max-width: 1200px;
+    font-family: 'Movement-DirectBlack';
 }
 
-.Identity h2 {
-    font-family: 'Movement-DirectBlack';
-    width: 100%;
+
+.Identity span {
+    display: inline-block;
     font-size: 3rem;
     margin-top: -.25em;
+    width: 100%
 }
 
 .Identity :nth-child(1) {
     text-align: left;
 }
 
-.Identity :nth-child(2) {
+.Identity :nth-child(3) {
     text-align: center;
 }
 
-.Identity :nth-child(3) {
+.Identity :nth-child(5) {
     text-align: right;
 }
 
@@ -282,7 +294,11 @@ h3 {
 }
 
 .LinkIcon {
-    filter: invert(29%) sepia(71%) saturate(369%) hue-rotate(166deg) brightness(97%) contrast(93%);
+    color: #345b7b;
+}
+
+.LinkIcon svg {
+    fill: currentColor
 }
 
 .wp-block-gallery {
@@ -311,28 +327,28 @@ h3 {
 
 .ProjectShowcase {
     gap: 2em;
-
     display: grid;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .Title {
-    z-index: 0;
+    position: relative;
+    z-index: 1;
     background-color: #3C2A3C;
     color: #C2D6D5;
     border: 2px solid #3C2A3C;
     border-left-width: 5px;
     border-bottom-width: 3px;
     border-radius: 8px;
-    padding: 8px;
-    margin-bottom: -15px;
-    margin-left: -8px;
+    padding: .25em;
+    margin-bottom: -.5em;
+    margin-left: .25em;
     width: fit-content;
 }
 
 .RecentPost {
-    z-index: -1;
+    z-index: 0;
     max-width: 900px;
     padding-bottom: 10vh;
     /* justify-self: left; */
@@ -350,14 +366,27 @@ h3 {
     text-decoration: none;
 }
 
-.BusinessCard {
-    grid-column-start: 3;
-    margin-bottom: 2em;
+footer {
+    display: grid;
+    justify-content: center;
 }
 
-.BusinessCard img {
+.BusinessCard {
+    margin-top: 2em;
+    max-width: fit-content;
+    margin-bottom: 2em;
+    text-decoration: none;
+}
+
+.BusinessCard a {
+    padding: 0 3em;
+}
+
+.BusinessCard svg {
+    color: #345b7b;
     min-height: 75px;
     max-height: 100px;
+    fill: currentColor;
 }
 
 @media screen and (max-width: 900px) {
@@ -376,8 +405,12 @@ h3 {
         margin-right: 0px;
     }
 
-    .Identity {
+    .Identity span{
         font-size: 1em;
+    }
+
+    .IconContainer {
+        margin: .4em 3em 0;
     }
 }
 
@@ -401,8 +434,7 @@ h3 {
 
     .Identity {
         width: 95%;
-        padding-left: 0px;
-        padding-right: 5px;
+        padding-right: .5em;
     }
 
     header {
@@ -445,12 +477,12 @@ h3 {
 
     .About {
         margin-top: 1em;
-        margin-left: 15px;
         margin-right: 0;
     }
 
     .AboutMe {
         grid-column-start: 1;
+        margin-left: 1em;
     }
 
     .IconContainer {
@@ -458,6 +490,5 @@ h3 {
         grid-column-start: auto;
         grid-column-end: span 3;
         max-width: fit-content;
-        margin-left: 8px;
     }
 }

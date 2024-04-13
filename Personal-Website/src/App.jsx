@@ -17,8 +17,8 @@ function App() {
     // locks blur to stop tracking past an effective point so it doesn't get blown out
     if (window.scrollY < 200) {
       scrollBlur = window.scrollY / (140);
-      opacity = (100 - (window.scrollY/2)) / 100;
-    } 
+      opacity = (100 - (window.scrollY / 2)) / 100;
+    }
     p5sketch.style.filter = `blur(${scrollBlur}px)`;
     navbar.style.backgroundColor = `rgba(60, 42, 60, ${opacity})`;
     navbar.style.backdropFilter = `blur(${scrollBlur}px)`;
@@ -43,11 +43,11 @@ function App() {
       </nav>
       <header role='banner' id='header'>
         <h1>Taite McGrady</h1>
-        <iframe src="https://taiteb.github.io/gradientSweep" scrolling='no' id='p5sketch'></iframe>
+        <iframe src="https://taiteb.github.io/gradientSweep" scrolling='no' id='p5sketch' defer></iframe>
       </header>
-      
-      
-      
+
+
+
 
       <Routes>
         <Route path='/' element={<Home handleScroll={handleScroll} />} />
@@ -57,7 +57,12 @@ function App() {
         <Route path='/recent' element={<Recent />} />
       </Routes>
 
-      <iframe src="https://taiteb.github.io/Truchet/" scrolling='no' className='background'></iframe>
+
+      <footer>
+        <Contact />
+      </footer>
+
+      <iframe src="https://taiteb.github.io/Truchet/" scrolling='no' className='background' defer></iframe>
     </>
   )
 }
